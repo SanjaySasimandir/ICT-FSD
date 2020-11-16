@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.carousel-item {
+    height: 30em;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+.fit-width img {
+    width: 100%;
+}
+
+margintop {
+    margin-top: 50em;
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+}
+
+/*Trigger Button*/
+
+.login-trigger {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to bottom right, #B05574, #F87E7B);
+    padding: 15px 30px;
+    border-radius: 30px;
+    position: relative;
+    top: 50%;
+}
+
+/*Modal*/
+
+h4 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.close {
+    color: #fff;
+    transform: scale(1.2)
+}
+
+.modal-content {
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #F87E7B, #B05574);
+}
+
+.form-control {
+    margin: 1em 0;
+}
+
+.form-control:hover, .form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.username, .password {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #fff;
+}
+
+.login {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #FAB87F;
+    color: #FAB87F;
+    font-weight: bold;
+    transition: all .5s;
+    margin-top: 1em;
+}
+
+.login:hover {
+    background: #FAB87F;
+    color: #fff;
+}
+
+.roundborder {
+    border-radius: 1.5em;
+    height: 3rem;
+    margin: 0px;
+    align-items: center;
+}
+
+.google-btn {
+    background-color: #EA4335;
+    padding-top: 10px;
+    color: white;
+}
+
+.fb-btn {
+    background-color: #3B5998;
+    padding-top: 10px;
+    color: white;
+}
+
+.google-brand {
+    color: gray;
+}
+
+.google-brand :hover {
+    color: #EA4335;
+}
+
+.fb-brand {
+    color: gray;
+}
+
+.fb-brand :hover {
+    color: #3B5998;
+}
+
+.ig-brand {
+    color: gray;
+}
+
+.ig-brand :hover {
+    color: white;
+}
+
+.twitter-brand {
+    color: gray;
+}
+
+.twitter-brand :hover {
+    color: #1DA1F2;
+}
