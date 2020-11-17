@@ -103,12 +103,13 @@
                                     <div class="text-center">
                                         <h3 class="text-dark mb-4">Welcome Back!</h3>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group"><input class="form-control roundborder" type="email"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address..." name="email"></div>
-                                        <div class="form-group"><input class="form-control roundborder" type="password"
-                                                id="exampleInputPassword" placeholder="Password" name="password"></div>
+                                    <form class="user" action="index.html" onsubmit="return loginValidation();">
+                                        <div class="form-group"><input class="form-control roundborder" id="inputEmail"
+                                                placeholder="Enter Email Address"></div>
+                                        <label for="emailError" id="emailError"></label>
+                                        <div class="form-group"><input class="form-control roundborder"
+                                                id="inputPassword" placeholder="Password"></div>
+                                        <label for="passwordError" id="passwordError"></label>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <div class="form-check" style="float: left;"><input
@@ -117,8 +118,8 @@
                                                         class="form-check-label custom-control-label"
                                                         for="formCheck-1">Remember Me</label></div>
                                             </div>
-                                        </div><a class="btn btn-primary btn-block roundborder"
-                                            style="padding-top: 10px;">Login</a>
+                                        </div><button class="btn btn-primary btn-block roundborder" type="submit"
+                                            id="submit">Login</button>
                                         <hr><a class="btn btn-block roundborder google-btn" role="button"><i
                                                 class="fab fa-google"></i>&nbsp; Login with Google</a><a
                                             class="btn fb-btn btn-block roundborder" role="button"><i
@@ -157,6 +158,7 @@
             <div style="color: white;">Kerala Tourism © 2020</div>
         </div>
     </footer>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
