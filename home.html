@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Kerala Tourism</title>
     <link rel="icon" href="./Images/Logo/Kerala-Logo.png">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -25,11 +25,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fontawesome-all.min.css">
 </head>
+</head>
 
-<body background="./Images/Fillers/another beach.jpg">
+<body background="./Images/Munnar/arindam-saha-vXxTMInjdKc-unsplash.jpg">
     <!-- Navigation Bar Starts -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src="./Images/Logo/Kerala-Logo.png" width="85px" height="50px"
+        <a class="navbar-brand" href="#"><img src="./Images/Logo/Kerala-Logo.png" width="85px" height="45px"
                 class="d-inline-block align-top" alt="" loading="lazy">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -40,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About Us</a>
@@ -70,11 +71,11 @@
                         <a class="dropdown-item" href="districts.html">View All Districts</a>
                     </div>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Login</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="./index.html">Logout</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -84,66 +85,72 @@
         </div>
     </nav>
     <!-- Navigation Bar Ends -->
-    <!-- Form Starts -->
+
+    <!-- Carousel Starts Here -->
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-12 col-xl-10">
-                <div class="card shadow-lg o-hidden border-0 my-5">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-flex">
-                                <div class="flex-grow-1">
-                                    <img src="./Images/Fillers/lake.jpg"
-                                        style="border-bottom-left-radius: 0.25rem; border-top-left-radius: 0.25rem;"
-                                        alt="Login Image" width="100%">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./idukki.html">
+                                <img src="./Images/Munnar/Topstationmunnar.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="./idukki.html" style="text-decoration: none; color: white;">
+                                        <h5>Explore Idukki</h5>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h3 class="text-dark mb-4">Welcome Back!</h3>
-                                    </div>
-                                    <form class="user" action="home.html" onsubmit="return loginValidation();">
-                                        <div class="form-group"><input class="form-control roundborder" id="inputEmail"
-                                                placeholder="Enter Email Address" oninput="emailValidate();"></div>
-                                        <label class="card" hidden="true"
-                                            style="padding: 10px; border: 2px solid #DC3545;" for="emailError"
-                                            id="emailError"></label>
-                                        <div class="form-group"><input class="form-control roundborder"
-                                                id="inputPassword" placeholder="Password" oninput="passwordStrength();">
-                                        </div>
-                                        <label class="card" hidden="true" for="passwordError" id="passwordError"
-                                            style="padding:10px; border: 2px solid #DC3545;"></label>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <div class="form-check" style="float: left;"><input
-                                                        class="form-check-input custom-control-input" type="checkbox"
-                                                        id="formCheck-1"><label
-                                                        class="form-check-label custom-control-label"
-                                                        for="formCheck-1">Remember Me</label></div>
-                                            </div>
-                                        </div><button class="btn btn-primary btn-block roundborder" type="submit"
-                                            id="submit">Login</button>
-                                        <hr><a class="btn btn-block roundborder google-btn" role="button"><i
-                                                class="fab fa-google"></i>&nbsp; Login with Google</a><a
-                                            class="btn fb-btn btn-block roundborder" role="button"><i
-                                                class="fab fa-facebook-f"></i>&nbsp; Login with
-                                            Facebook</a>
-                                        <hr>
-                                    </form>
-                                    <div class="text-center"><a class="small" href="#">Forgot
-                                            Password?</a></div>
-                                    <div class="text-center"><a class="small" href="register.html">Create an
-                                            Account!</a></div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="kottayam.html">
+                                <img src="./Images/Kottayam/Kumarkom.jpg" class=" center-block d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="./kottayam.html" style="text-decoration: none; color: white;">
+                                        <h5>Explore Kottayam</h5>
+                                    </a>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="alappuzha.html">
+                                <img src="./Images/Alappuzha/Vembanad.jpeg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="./alappuzha.html" style="text-decoration: none; color: white;">
+                                        <h5>Explore Alappuzha</h5>
+                                    </a>
+                                </div>
+                            </a>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Form Ends -->
+    <!-- Carousel Ends Here -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card col-lg-6" style="padding: 15px; margin-top: 20px;">
+                <h5>Welcome to Kerala Tourism</h5>
+                <a href="./districts.html" class="btn btn-block btn-primary roundborder" style="padding-top: 10px;">
+                    View Destinations</a>
+            </div>
+        </div>
+    </div>
     <footer style="padding-top:25px">
         <div class="justify-content-center" style="background-color: #343A40; padding-top: 15px;">
             <ul class="list-inline">
@@ -157,12 +164,11 @@
                         style="text-decoration: none;"></a>&nbsp;&nbsp;</li>
             </ul>
             <div>
-                <a href="./index.html"><img src="./Images/Logo/Kerala-Logo.png" alt="" width="5%"></a>
+                <a href="#"><img src="./Images/Logo/Kerala-Logo.png" alt="" width="5%"></a>
             </div>
             <div style="color: white;">Kerala Tourism © 2020</div>
         </div>
     </footer>
-    <script src="js/login.js"></script>
 </body>
 
 </html>

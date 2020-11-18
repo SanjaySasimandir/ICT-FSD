@@ -100,24 +100,41 @@
                             <div class="text-center">
                                 <h3 class="text-dark mb-4">Create an Account!</h4>
                             </div>
-                            <form class="user" action="index.html">
+                            <form class="user" action="home.html" onsubmit="return loginValidation();">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control roundborder"
-                                            type="text" id="firstName" required placeholder="First Name"></div>
+                                            type="text" id="firstName" placeholder="First Name"></div>
+
                                     <div class="col-sm-6"><input class="form-control roundborder" type="text"
-                                            id="lastName" required placeholder="Last Name"></div>
+                                            id="lastName" placeholder="Last Name"></div>
                                 </div>
                                 <div class="form-group"><input class="form-control roundborder" type="email"
-                                        id="inputEmail" required placeholder="Email Address"></div>
+                                        id="inputEmail" placeholder="Email Address" oninput="emailValidate();">
+                                </div>
+
+                                <label class="card" hidden="true" style="padding: 10px; border: 2px solid #DC3545;"
+                                    for="emailError" id="emailError"></label>
+
                                 <div class="form-group"><input class="form-control roundborder" type="tel"
-                                        id="phoneNumber" required placeholder="Phone Number"></div>
+                                        id="phoneNumber" placeholder="Phone Number" oninput="phoneValidate();">
+                                </div>
+                                <label class="card" hidden="true" for="phoneError" id="phoneError"
+                                    style="padding:10px; border: 2px solid #DC3545;"></label>
+
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control roundborder"
-                                            type="password" id="passwordInput" required placeholder="Password">
+                                            type="password" id="inputPassword" placeholder="Password"
+                                            oninput="passwordStrength();">
                                     </div>
+
                                     <div class="col-sm-6"><input class="form-control roundborder" type="password"
-                                            id="repeatPasswordInput" required placeholder="Repeat Password"></div>
-                                </div><input class="btn btn-primary btn-block roundborder" type="submit"
+                                            id="repeatPasswordInput" placeholder="Repeat Password"
+                                            oninput="repeatpasswordCheck(); ">
+                                    </div>
+                                </div>
+                                <label class="card" hidden="true" for="passwordError" id="passwordError"
+                                    style="padding:10px; border: 2px solid #DC3545;"></label>
+                                <input class="btn btn-primary btn-block roundborder" type="submit"
                                     value="Register Account">
                                 <!-- Register
                                     Account</button> -->
@@ -155,6 +172,7 @@
             <div style="color: white;">Kerala Tourism © 2020</div>
         </div>
     </footer>
+    <script src="./js/register.js"></script>
 </body>
 
 </html>
