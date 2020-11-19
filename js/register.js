@@ -77,10 +77,10 @@ function passwordStrength() {
         passwordError.innerText = "";
         passwordError.setAttribute("hidden", true);
         inputPassword.style.border = "";
+        // if (p.length >= 8 && p.length < 10) {
+        //     inputPassword.style.border = "2px solid #DC3545";
+        // }
         if (p.length >= 8 && p.length < 10) {
-            inputPassword.style.border = "2px solid #DC3545";
-        }
-        else if (p.length >= 10 && p.length < 12) {
             inputPassword.style.border = "2px solid #FFC107";
         }
         else {
