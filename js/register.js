@@ -123,16 +123,7 @@ function phoneValidate() {
     let regexp2 = /^([0-9]{3}).([0-9]{3}).([0-9]{4})$/;
     let regexp3 = /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
     let regexp4 = /^([0-9]{10})$/;
-    if (regexp1.test(phoneNumber.value)) {
-        phoneNumber.style.border = "2px solid #28A745";
-    }
-    else if (regexp2.test(phoneNumber.value)) {
-        phoneNumber.style.border = "2px solid #28A745";
-    }
-    else if (regexp3.test(phoneNumber.value)) {
-        phoneNumber.style.border = "2px solid #28A745";
-    }
-    else if (regexp4.test(phoneNumber.value)) {
+    if (regexp1.test(phoneNumber.value) | regexp2.test(phoneNumber.value) | regexp3.test(phoneNumber.value) | regexp4.test(phoneNumber.value)) {
         phoneNumber.style.border = "2px solid #28A745";
     }
     else {
