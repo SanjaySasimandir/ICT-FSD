@@ -132,9 +132,6 @@ function phoneValidate() {
     else if (regexp3.test(phoneNumber.value)) {
         phoneNumber.style.border = "2px solid #28A745";
     }
-    else if (regexp3.test(phoneNumber.value)) {
-        phoneNumber.style.border = "2px solid #28A745";
-    }
     else if (regexp4.test(phoneNumber.value)) {
         phoneNumber.style.border = "2px solid #28A745";
     }
